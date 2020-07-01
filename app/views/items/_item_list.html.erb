@@ -1,0 +1,14 @@
+
+<li class="list-group-item border-0 pl-0">
+  <div class="custom-control custom-checkbox">    
+    <div class="d-flex item-row">
+    <%= form_for item, url: list_item_path(@list, item) do |form|%>
+      <%= form.check_box :is_complete , class: "complete-checkbox"%>
+    <%end%>
+
+    <label class="title <%= item.is_complete? ? 'strkie-through' : ''%> " for="<%= item.id%>">
+        <%= item.title %>
+    </label>
+    <%= link_to 'X', list_item_path(@list, item), method: :delete , class: 'delete-button'%>
+  </div>
+</li>
