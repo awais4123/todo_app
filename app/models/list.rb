@@ -1,5 +1,6 @@
 class List < ApplicationRecord
-  has_many :items
+  # Relationships
+  has_many :items, dependent: :destroy
 
   # validations
   validates :title, presence: true

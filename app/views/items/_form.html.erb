@@ -1,0 +1,10 @@
+<%= form_for Item.new, url: list_items_path  do |form| %>
+  <div class="row">
+      <div class="col">
+          <%= form.text_field :title, class: "form-control" %>
+      </div>
+      <div class="col-auto">
+          <button class="btn-primary btn-md btn-block btn waves-effect waves-light" type="submit" id="todo-btn-submit">Add</button>
+      </div>
+  </div>
+<%end%>
